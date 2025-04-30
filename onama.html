@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>O nama</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  .menu {
+    display: flex;
+    gap: 15px;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-input {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .search-btn, .login-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .search-btn {
+    background-color: #555;
+    color: white;
+  }
+
+  .login-btn {
+    background-color: #008CBA;
+    color: white;
+  }
+</style>
+</head>
+<nav class="navbar">
+<div class="menu">
+    <a href="#" onclick="window.location.href='index.html'">Početna</a>
+    <a href="#" onclick="window.location.href='onama.html'">O nama</a>
+    <a href="#" onclick="window.location.href='kontakt.html'">Kontakt</a>
+</div>
+<div class="right-section">
+  <input type="text" class="search-input" placeholder="Pretraži..."/>
+  <button class="search-btn">Traži</button>
+  <button type="button" onclick="window.location.href='login.html'">Login</button>
+</div>
+</nav>
+<body>
+
+  <header>
+    <h1>O nama</h1>
+    <p>Upoznajte naš tim i našu misiju</p>
+
+  </header>
+
+ 
+  <section>
+    <h2>Naša misija</h2>
+    <p>Naša strast je skijanje, a naš cilj je pomoći skijašima svih nivoa da pronađu savršeno skijalište prilagođeno njihovim željama i potrebama. Bilo da tražite porodične staze, adrenalinske spusteve, netaknuti puder ili vrhunske après-ski sadržaje, mi vam olakšavamo izbor.
+
+      Kroz detaljne informacije, recenzije i preporuke, činimo pretragu jednostavnijom i efikasnijom, kako biste manje vremena trošili na istraživanje, a više uživali na snegu. Bez obzira na to da li ste početnik ili iskusni skijaš, tu smo da vas povežemo s idealnim mestima za nezaboravan zimski doživljaj.
+      
+      Vaše savršeno skijalište je samo nekoliko klikova daleko – krenimo zajedno u potragu!
+    </p>
+
+    <h2>Naše vrijednosti</h2>
+    <ul>
+      <li>⛷ Personalizacija – Svaki skijaš je drugačiji, zato nudimo preporuke prilagođene vašim željama, veštinama i stilu skijanja.
+
+      </li>
+      <li>🏔 Pouzdanost – Delimo tačne, ažurirane i objektivne informacije kako biste doneli najbolje odluke pri odabiru skijališta.</li>
+      <li>❄ Strast prema skijanju – Skijanje je više od sporta, to je način života. Naša misija je preneti tu strast i pomoći vam da pronađete savršene staze za nezaboravna iskustva.</li>
+    </ul>
+
+    <h2>Naš tim</h2>
+    <div class="team">
+      <div class="member">
+        <h3>Jakov Lazinica</h3>
+        <p>Web designer i Web Developer</p>
+      </div>
+      <div class="member">
+        <h3>Leo Petrović</h3>
+        <p>Web Developer</p>
+      </div>
+      <div class="member">
+        <h3>Ian Bogdesić</h3>
+        <p>Web Developer</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Vaša Tvrtka. Sva prava pridržana.
+  </footer>
+
+  <link rel="stylesheet" href="onama.css">
+
+
+</body>
+</html>

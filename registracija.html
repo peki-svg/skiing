@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content=""width=device-width, initial scale="1.0">
+        <title> Skijališta u europi </title>
+        <link rel="stylesheet" href="registracija.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body>
+        <h1>Registracija</h1>
+        <button class="back-button" onclick="goHome()">🏠 Početna</button>
+  
+    <script>
+      function goHome() {
+        // Zamijeni 'index.html' s pravom početnom stranicom ako je drugačije
+        window.location.href = 'index.html';
+      }
+    </script>
+        <form>
+            <label for="name">Ime</label>
+            <input type="text" id="name" required><br>
+
+            <label for="surname">Prezime</label>
+            <input type="text" id="surname" required><br>
+
+            <label for="Email">E-mail</label>
+            <input type="email" id="Email" required><br>
+
+            <div class="input-group">
+                <label for="password">Lozinka</label>
+                <div class="password-wrapper">
+                  <input type="password" id="password" required>
+                  <i class="fa-solid fa-eye eye-icon" id="togglePassword"></i>
+                </div>
+            </div><br>
+              
+
+            <label for="date-of-birth">Datum rođenja</label>
+            <input type="date" id="date-of-birth" required>
+                
+      </select> <br><br>
+
+      <label for="uvjeti">Prihvati uvjete korištenja</label>
+      <input type="checkbox" id="uvjeti" required> <br>
+
+      <button class="dugmeregistr" href="index.html" > Registriraj se </button>
+
+
+      <script src="registracija.js"></script>
+
+
+      </form>
+    </body>
+
+

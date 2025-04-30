@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+  h1, h2 {
+    color: #333;
+  }
+  .news, .ski-resorts {
+    margin-bottom: 40px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    display:flex;
+    text-decoration: none;
+    color: inherit;
+  }
+  .card img {
+    width: 200px;
+    height: auto;
+  }
+  .card-content {
+    padding: 15px;
+  }
+  .card-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  .card-content p {
+    margin: 0;
+  }
+  .card:hover {
+    transform: scale(1.01);
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* lijeva - srednja - desna kolona */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .sidebar {
+    background-color: #e0e0e0;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+  }
+  
+  
+  

@@ -1,0 +1,197 @@
+/* Učitavanje Google fonta */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* CENTRIRANJE I POZADINA */
+body {
+    text-align: center;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* NASLOV */
+h1 {
+    font-size: 50px;
+    color: #004aad;
+    font-weight: bold;
+    margin-bottom: 15px; /* Manji razmak ispod naslova */
+}
+
+/* POZADINSKA SLIKA */
+html::before {
+    content: ''; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-image: url("https://cdn.pixabay.com/photo/2020/10/10/22/01/winter-5644263_1280.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    filter: blur(1px);
+    z-index: -1; 
+}
+
+/* FORMA */
+form {
+    width: 80%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 25px;
+    border: 3px solid #004aad;
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* INPUT POLJA */
+input, select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    border: 2px solid #004aad;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    display: block;
+}
+
+/* Fokus na input polja */
+input:focus, select:focus {
+    border-color: #0056b3;
+    box-shadow: 0px 0px 12px rgba(0, 123, 255, 0.6);
+}
+
+/* CHECKBOX STIL */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 8px; /* Smanjen razmak između checkboxa i teksta */
+}
+
+/* VEĆI I PORAVNAT CHECKBOX */
+input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #004aad;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Kada je checkbox označen */
+input[type="checkbox"]:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+/* TEKST UZ CHECKBOX */
+.checkbox-container label {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* DUGME */
+.dugmeregistr {
+    cursor: pointer;
+    background-color: #004aad;
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 15px;
+}
+
+.dugmeregistr:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0px 10px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* FOOTER */
+footer {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+    border-radius: 15px;
+    border: 2px solid #004aad;
+    padding: 12px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 60%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.eye-icon:hover {
+    color: darkgray;
+}
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+  }
+
+  .back-button:hover {
+    background-color: #0056b3;
+  }
