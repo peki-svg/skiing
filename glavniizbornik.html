@@ -1,0 +1,70 @@
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  .menu {
+    display: flex;
+    gap: 15px;
+  }
+
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-input {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .search-btn, .login-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .search-btn {
+    background-color: #555;
+    color: white;
+  }
+
+  .login-btn {
+    background-color: #008CBA;
+    color: white;
+  }
+</style>
+</head>
+<nav class="navbar">
+<div class="menu">
+    <a href="#" onclick="window.location.href='index.html'">Početna</a>
+    <a href="#" onclick="window.location.href='onama.html'">O nama</a>
+    <a href="#" onclick="window.location.href='kontakt.html'">Kontakt</a>
+</div>
+<div class="right-section">
+  <input type="text" class="search-input" placeholder="Pretraži..."/>
+  <button class="search-btn">Traži</button>
+  <button type="button" onclick="window.location.href='prijava.html'">Login</button>
+</div>
+</nav>
