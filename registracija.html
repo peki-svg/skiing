@@ -28,23 +28,42 @@
             <input type="email" id="Email" required><br>
 
             <div class="input-group">
-                <label for="password">Lozinka</label>
-                <div class="password-wrapper">
-                  <input type="password" id="password" required>
-                  <i class="fa-solid fa-eye eye-icon" id="togglePassword"></i>
+              <label for="password">Lozinka</label>
+              <div class="tooltip-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  pattern="(?=.*[A-Z])(?=.*\d).{8,}"
+                />
+                <i class="fa-solid fa-eye eye-icon" id="togglePassword"></i>
+            
+                <div class="custom-tooltip">
+                  Lozinka mora sadržavati:
+                  <ul>
+                    <li>minimalno 8 znakova</li>
+                    <li>barem jedno veliko slovo</li>
+                    <li>barem jedan broj</li>
+                  </ul>
                 </div>
+              </div>
+            </div>
+            
             </div><br>
+            <label for="password" class="password-label">
               
 
             <label for="date-of-birth">Datum rođenja</label>
             <input type="date" id="date-of-birth" required>
                 
       </select> <br><br>
+      <label class="checkbox-container">
+        Prihvaćam <a href="uvjeti.html" target="_blank">uvjete korištenja</a>
+        <input type="checkbox" required>
+      </label>
 
-      <label for="uvjeti">Prihvati uvjete korištenja</label>
-      <input type="checkbox" id="uvjeti" required> <br>
-
-      <button class="dugmeregistr" href="index.html" > Registriraj se </button>
+      <button class="dugmeregistr" href="main.html" > Registriraj se </button>
 
 
       <script src="registracija.js"></script>

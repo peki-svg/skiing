@@ -15,9 +15,8 @@ togglePassword.addEventListener("click", () => {
 
 
 document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault(); // sprječava reload
+    e.preventDefault(); 
   
-    // Dohvaćanje vrijednosti iz inputa
     const name = document.getElementById("name").value;
     const surname = document.getElementById("surname").value;
     const email = document.getElementById("Email").value;
@@ -25,13 +24,11 @@ document.querySelector("form").addEventListener("submit", function (e) {
     const birthdate = document.getElementById("date-of-birth").value;
     const accepted = document.getElementById("uvjeti").checked;
   
-    // Provjera je li checkbox označen
     if (!accepted) {
       alert("Morate prihvatiti uvjete korištenja.");
       return;
     }
   
-    // Spremanje korisnika u LocalStorage kao JSON
     const user = {
       name,
       surname,
@@ -44,3 +41,4 @@ document.querySelector("form").addEventListener("submit", function (e) {
     window.location.href = "login.html";
   });
   
+
