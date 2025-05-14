@@ -3,20 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Početna stranica</title>
-  <link rel="stylesheet" href="test.css">
+  <link rel="stylesheet" href="pocetna.css">
+
 </head>
 <nav class="navbar">
   <div class="menu">
-      <a href="#" onclick="window.location.href='index.html'">Početna</a>
-      <a href="#" onclick="window.location.href='onama.html'">O nama</a>
-      <a href="#" onclick="window.location.href='kontakt.html'">Kontakt</a>
+    <a href="#" onclick="window.location.href='index.html'">Početna</a>
+    <a href="#" onclick="window.location.href='onama.html'">O nama</a>
+    <a href="#" onclick="window.location.href='kontakt.html'">Kontakt</a>
   </div>
   <div class="right-section">
-    <input type="text" class="search-input" placeholder="Pretraži..."/>
-    <button class="search-btn">Traži</button>
-    <button type="button" onclick="window.location.href='prijava.html'">Login</button>
+    <input type="text" id="drzava" placeholder="Unesi državu npr. Austrija">
+    <button class="search-btn" onclick="pretraziSkijalista()">Pretraži</button>
+    <button type="button" class="login-btn" onclick="window.location.href='login.html'">Login</button>
   </div>
-  </nav>
+</nav>
+
+<div id="mapaContainer">
+  <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="search.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <body>
 <main>
  <div class="news">
@@ -24,7 +33,7 @@
     <a href="https://planetski.eu/" target="_blank" class="card">
       <img src="https://planetski.eu/wp-content/uploads/2021/01/PlanetSkiLogo-Hi-res..jpeg" alt="Slika vijesti">
       <div class="card-content">
-        <h3>Planteski</h3>
+        <h3>Planetski</h3>
         <p>Pronađi sve najnovije vijesti o skijalištima i skijanju</p><br>
         <p>U realnom vremenu vijesti o skijalištima koja rade i koja imaju snijega</p>
       </div>
@@ -60,6 +69,14 @@
         <h3>Verbier, Švicarska</h3>
         <p>Verbier je jedno od najprestižnijih švicarskih skijališta, smješteno u regiji 4 Vallées. Poznato je po vrhunskim terenima izvan piste,
            živahnoj après-ski sceni i panoramskim pogledima na Alpe. Privlači iskusne skijaše, freeridere i one koji traže luksuzan zimski odmor.</p>
+      </div>
+    </a>
+    <a href="https://www.altabadia.org/en/" target="_blank" class="card">
+      <img src="https://www.visitaltabadia.it/images/altabadia/inverno-altabadia.jpg" alt="Skijalište 3">
+      <div class="card-content">
+        <h3>Alta Badia, Italija</h3>
+        <p>Alta Badia je skijalište u Dolomitima u Italiji, poznato po blagim do srednje teškim stazama idealnim za obitelji i rekreativce.
+           Dio je skijaške regije Dolomiti Superski i nudi predivne poglede, vrhunsku gastronomiju i pristup ruti Sella Ronda.</p>
       </div>
     </a>
 
