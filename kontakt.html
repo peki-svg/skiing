@@ -8,21 +8,24 @@
 </head>   
 <nav class="navbar">
   <div class="menu">
-      <a href="#" onclick="window.location.href='index.html'">Početna</a>
-      <a href="#" onclick="window.location.href='onama.html'">O nama</a>
-      <a href="#" onclick="window.location.href='kontakt.html'">Kontakt</a>
+    <a href="#" onclick="window.location.href='index.html'">Početna</a>
+    <a href="#" onclick="window.location.href='onama.html'">O nama</a>
+    <a href="#" onclick="window.location.href='kontakt.html'">Kontakt</a>
   </div>
   <div class="right-section">
-    <input type="text" class="search-input" placeholder="Pretraži..."/>
-    <button class="search-btn">Traži</button>
-    <button type="button" onclick="window.location.href='login.html'">Login</button>
+    <input type="text" id="drzava" placeholder="Unesi državu npr. Austrija">
+    <button class="search-btn" onclick="pretraziSkijalista()">Pretraži</button>
+    <button type="button" class="login-btn" onclick="window.location.href='login.html'">Login</button>
   </div>
-  </nav>
-  <div id="mapaContainer">    
-     <div id="map"></div>   
-    </div>    
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>   
-    <script src="search.js"></script>
+</nav>
+
+<div id="mapaContainer">
+  <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="search.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <body>
 
   <header>
