@@ -1,1 +1,1 @@
-dad
+bogi ima jako mali nos    - Alan
