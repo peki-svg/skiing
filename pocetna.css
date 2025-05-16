@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #cccccc;
 }
 
 .navbar {
@@ -73,7 +73,7 @@ body {
   /* Fiksne sidebare */
   .sidebar {
     position: fixed;
-    top: 50px;
+    top: 70px;
     width: 150px;
     height: 100%;
     background-color: #e0e0e0;
@@ -127,4 +127,53 @@ body {
   .ski-resorts h2 {
     margin-bottom: 20px;
   }
+
+  .favbetreklama{
+
+  position: fixed;
+  top: 6vh;         /* pomak sa vrha za 10% visine prozora */
+  left: 0;
+  width: 150px;
+  height: 96vh;      /* visina smanjena za tih 10vh da ne prelazi ekran */
+  background-color: #e0e0e0;
+  overflow: hidden;
+  z-index: 1100;
+
+  }
+
+  .admiralreklama{
+     position: fixed;
+  top: 6vh;
+  right: 0;
+  width: 150px;
+  height: 100vh;
+  background-color: #e0e0e0;
+  overflow: hidden;
+  z-index: 1100;
+  }
   
+  #countrySelect {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 2px solid #0077b6;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  color: #333;
+  appearance: none; /* skida default stil na većini preglednika */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%230077b6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#countrySelect:hover {
+  border-color: #023e8a;
+  background-color: #e0f4ff;
+}
+
+#countrySelect:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.3);
+}

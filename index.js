@@ -1653,44 +1653,45 @@ const skijalistaPoDrzavi = {
 
   let mapa;
 
-  function pretraziSkijalista() {
-    const drzavaInput = document.getElementById("drzava").value.trim().toLowerCase();
-    const skijalista = skijalistaPoDrzavi[drzavaInput];
-  
-    if (!skijalista) {
-      alert("Skijališta za ovu državu nisu dostupna.");
-      return;
-    }
-  
-    document.getElementById("mapaContainer").style.display = "block";
-  
-    if (mapa) {
-      mapa.remove();
-      mapa = null;
-    }
-  
-    mapa = L.map("map").setView([skijalista[0].lat, skijalista[0].lng], 8);
-  
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; OpenStreetMap doprinosioci'
-    }).addTo(mapa);
-  
-    const customIcon = L.icon({
-      iconUrl: 'https://cdn-icons-png.flaticon.com/512/9356/9356230.png',
-      iconSize: [40, 40],
-      iconAnchor: [20, 40], // centrirano dno ikone
-      popupAnchor: [0, -40]
-    });
-  
-    skijalista.forEach((skijaliste) => {
-      const marker = L.marker([skijaliste.lat, skijaliste.lng], { icon: customIcon }).addTo(mapa);
-      marker.bindPopup(`
-        <b>${skijaliste.naziv}</b><br>
-        ${skijaliste.opis}<br>
-        <a href="${skijaliste.link}" target="_blank">Više informacija</a>
-      `);
-    });
+ function pretraziSkijalista(drzavaInput) {
+  const drzava = drzavaInput.toLowerCase();
+  const skijalista = skijalistaPoDrzavi[drzava];
+
+  if (!skijalista) {
+    alert("Skijališta za ovu državu nisu dostupna.");
+    return;
   }
+
+  document.getElementById("mapaContainer").style.display = "block";
+
+  if (mapa) {
+    mapa.remove();
+    mapa = null;
+  }
+
+  mapa = L.map("map").setView([skijalista[0].lat, skijalista[0].lng], 8);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '&copy; OpenStreetMap doprinosioci'
+  }).addTo(mapa);
+
+  const customIcon = L.icon({
+    iconUrl: 'https://cdn-icons-png.flaticon.com/512/9356/9356230.png',
+    iconSize: [40, 40],
+    iconAnchor: [20, 40],
+    popupAnchor: [0, -40]
+  });
+
+  skijalista.forEach((skijaliste) => {
+    const marker = L.marker([skijaliste.lat, skijaliste.lng], { icon: customIcon }).addTo(mapa);
+    marker.bindPopup(`
+      <b>${skijaliste.naziv}</b><br>
+      ${skijaliste.opis}<br>
+      <a href="${skijaliste.link}" target="_blank">Više informacija</a>
+    `);
+  });
+}
+
 
   function searchCountry(input) {
     // Pretvori unos u mala slova
@@ -1704,4 +1705,11 @@ const skijalistaPoDrzavi = {
         }
     }
     console.log("Nema poklapanja.");
+}
+
+function handleCountryChange() {
+  const selected = document.getElementById("countrySelect").value;
+  if (selected) {
+    pretraziSkijalista(selected);
+  }
 }
