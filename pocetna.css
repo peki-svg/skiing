@@ -134,7 +134,7 @@ body {
   .favbetreklama{
 
   position: fixed;
-  top: 6vh;         /* pomak sa vrha za 10% visine prozora */
+  top: 6.45vh;         /* pomak sa vrha za 10% visine prozora */
   left: 0;
   width: 150px;
   height: 96vh;      /* visina smanjena za tih 10vh da ne prelazi ekran */
@@ -146,7 +146,7 @@ body {
 
   .admiralreklama{
      position: fixed;
-  top: 6vh;
+  top: 6.45vh;
   right: 0;
   width: 150px;
   height: 100vh;
