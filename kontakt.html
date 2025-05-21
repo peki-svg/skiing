@@ -13,8 +13,30 @@
     <a href="#" onclick="window.location.href='kontakt.html'">Kontakt</a>
   </div>
   <div class="right-section">
-    <input type="text" id="drzava" placeholder="Unesi državu npr. Austrija">
-    <button class="search-btn" onclick="pretraziSkijalista()">Pretraži</button>
+   <label for="countrySelect">Odaberi državu:</label>
+<select id="countrySelect" onchange="handleCountryChange()">
+  <option value="">-- Odaberi --</option>
+  <option value="austrija">Austrija</option>
+  <option value="italija">Italija</option>
+  <option value="švicarska">Švicarska</option>
+  <option value="bugarska">Bugarska</option>
+  <option value="francuska">Francuska</option>
+  <option value="njemačka">Njemačka</option>
+  <option value="slovenija">Slovenija</option>
+  <option value="slovačka">Slovačka</option>
+  <option value="češka">Češka</option>
+  <option value="poljska">Poljska</option>
+  <option value="rumunjska">Rumunjska</option>
+  <option value="španjolska">Španjolska</option>
+  <option value="andora">Andora</option>
+  <option value="norveška">Norveška</option>
+  <option value="švedska">Švedska</option>
+  <option value="finska">Finska</option>
+  <option value="bosna i herzegovina">Bosna i Herzegovina</option>
+  <option value="crna gora">Crna Gora</option>
+  <option value="srbija">Srbija</option>
+  <option value="hrvatska">Hrvatska</option>
+</select>
     <button type="button" class="login-btn" onclick="window.location.href='login.html'">Login</button>
   </div>
 </nav>
