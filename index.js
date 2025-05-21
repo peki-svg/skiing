@@ -1691,22 +1691,9 @@ const skijalistaPoDrzavi = {
     `);
   });
 }
-
-
-  function searchCountry(input) {
-    // Pretvori unos u mala slova
-    const lowerCaseInput = input.toLowerCase();
-
-    // Prolazi kroz sve zemlje i njihove varijante
-    for (let country in countries) {
-        if (countries[country].includes(lowerCaseInput)) {
-            console.log(`Poklapanje pronađeno za: ${country}`);
-            return;
-        }
-    }
+{
     console.log("Nema poklapanja.");
 }
-
 function handleCountryChange() {
   const selected = document.getElementById("countrySelect").value;
   if (selected) {
