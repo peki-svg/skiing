@@ -1691,9 +1691,7 @@ const skijalistaPoDrzavi = {
     `);
   });
 }
-{
-    console.log("Nema poklapanja.");
-}
+
 function handleCountryChange() {
   const selected = document.getElementById("countrySelect").value;
   if (selected) {
