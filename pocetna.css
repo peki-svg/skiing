@@ -147,31 +147,17 @@ main {
   margin-bottom: 20px;
 }
 
-.favbetreklama{
-
-  position: fixed;
-  top: 6.45vh;         /* pomak sa vrha za 10% visine prozora */
-  left: 0;
-  width: 150px;
-  height: 96vh;      /* visina smanjena za tih 10vh da ne prelazi ekran */
-  background-color: #e0e0e0;
-  overflow: hidden;
-  z-index: 1100;
-
-  }
-
-  .admiralreklama{
-  position: fixed;
-  top: 50%;
-  bottom: auto;
-  right: 0;
-  width: 150px;
-  height: 10vh;    
-  background-color: #2b0a86;
-  overflow: hidden;
-  z-index: 1100;
-
-  }
+/* Reklame unutar sidebara */
+.favbetreklama, .admiralreklama {
+  position: static; /* Uklonjeno fiksno pozicioniranje unutar sidebara */
+   top: 6.45vh;
+     right: 0;
+  width: 150px; /* Omogućava slici da zauzme punu širinu sidebara */
+  z-index: 1100;body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #cccccc;
+}
 
 .navbar {
   display: flex;
@@ -634,4 +620,4 @@ main {
   height: 100%; /* Visina se prilagođava širini */
   display: block; /* Osigurava da slika zauzme svoj red */
   margin-bottom: 10px; /* Mali razmak između reklama ako ih ima više */
-}
+}}
