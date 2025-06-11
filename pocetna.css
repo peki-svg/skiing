@@ -4,18 +4,24 @@ body {
   background-color: #cccccc;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  z-index: 9999;
   align-items: center;
   background-color: #333;
   padding: 10px 20px;
   color: white;
-  position: fixed; /* Fiksiranje navigacije */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 9999;
 }
 
 .menu {
@@ -41,7 +47,8 @@ body {
   border: none;
 }
 
-.search-btn, .login-btn {
+.search-btn,
+.login-btn {
   padding: 6px 10px;
   border: none;
   border-radius: 4px;
@@ -59,40 +66,32 @@ body {
   color: white;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 #mapaContainer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 93.45vh;
-    z-index: 999;
-    display: flex;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 93.45vh;
+  z-index: 999;
+  display: flex;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 }
 
 #map {
-    display: flex;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
-/* Fiksne sidebare */
 .sidebar {
   position: fixed;
-  top: 70px; /* Počinje ispod fiksne navigacije */
+  top: 60px;
   width: 150px;
-  height: calc(100% - 70px); /* Zauzima preostalu visinu do dna ekrana */
+  height: calc(100% - 50px);
   background-color: #e0e0e0;
-  padding: 0; /* Uklonjen padding da reklama popuni cijelu visinu */
-  text-align: center; /* Centriranje sadržaja horizontalno */
+  text-align: center;
   z-index: 1000;
-  overflow-y: auto; /* Dodano za skrolanje sadržaja sidebara ako je potrebno */
+  overflow-y: auto;
 }
 
 .sidebar.left {
@@ -103,24 +102,20 @@ body {
   right: 0;
 }
 
-/* Stil za link unutar sidebara */
 .sidebar a {
-  display: block; /* Link postaje blok element */
-  height: 100%; /* Link popunjava cijelu visinu sidebara */
-  text-decoration: none; /* Uklanja podcrtavanje linka */
+  display: block;
+  height: 100%;
+  text-decoration: none;
 }
 
-
-/* Glavni sadržaj (centriran između sidebarova) */
 main {
-  margin: 70px 170px 0 170px; /* Dodan gornji margin da sadržaj ne bude ispod navigacije */
+  margin: 70px 170px 0 170px;
   padding: 20px;
 }
 
-/* Kartice vijesti i skijališta */
 .card {
   display: flex;
-  flex-direction: row; /* Osigurava da slika i sadržaj budu jedan pored drugog na većim ekranima */
+  flex-direction: row;
   text-decoration: none;
   color: #000;
   border: 1px solid #ccc;
@@ -136,15 +131,15 @@ main {
 }
 
 .card img {
-  width: 200px; /* Zadržana fiksna širina za veće ekrane */
+  width: 200px;
   height: auto;
   object-fit: cover;
-  flex-shrink: 0; /* Spriječava smanjivanje slike */
+  flex-shrink: 0;
 }
 
 .card-content {
   padding: 15px;
-  flex-grow: 1; /* Omogućava sadržaju da zauzme preostali prostor */
+  flex-grow: 1;
 }
 
 .news h1,
@@ -152,16 +147,13 @@ main {
   margin-bottom: 20px;
 }
 
-/* Reklame unutar sidebara (slike) */
-.favbetreklama, .admiralreklama {
-  /* position: static; */ /* Već je static unutar fiksnog sidebara */
-  width: 100%; /* Slika popunjava širinu roditeljskog linka */
-  height: 100%; /* Slika popunjava visinu roditeljskog linka */
-  display: block; /* Osigurava da je slika blok element */
-  /* margin-bottom: 10px; */ /* Uklonjen donji margin */
-  object-fit: cover; /* Slika pokriva cijeli prostor bez izobličenja */
+.favbetreklama,
+.admiralreklama {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
-
 
 #countrySelect {
   padding: 10px 14px;
@@ -170,7 +162,7 @@ main {
   border-radius: 8px;
   background-color: #f1f1f1;
   color: #333;
-  appearance: none; /* skida default stil na većini preglednika */
+  appearance: none;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%230077b6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 10px center;
@@ -187,74 +179,4 @@ main {
 #countrySelect:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.3);
-}
-
-/* Media Query za manje ekrane (npr. tableti i mobiteli) */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Navigacija se slaže vertikalno */
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  .menu {
-    flex-direction: column; /* Izbornik se slaže vertikalno */
-    gap: 5px;
-    margin-bottom: 10px;
-  }
-
-  .right-section {
-    flex-direction: column; /* Desni dio navigacije se slaže vertikalno */
-    align-items: flex-start;
-    gap: 5px;
-    width: 100%; /* Zauzima punu širinu */
-  }
-
-  #countrySelect,
-  .search-input,
-  .search-btn,
-  .login-btn {
-    width: 100%; /* Elementi u desnom dijelu zauzimaju punu širinu */
-  }
-
-  .sidebar {
-    position: static; /* Sidebari postaju dio normalnog toka dokumenta */
-    width: 100%; /* Zauzimaju punu širinu */
-    height: auto; /* Visina se prilagođava sadržaju */
-    padding: 10px;
-    margin-bottom: 20px; /* Razmak između sidebara i glavnog sadržaja */
-    top: auto; /* Resetiranje top pozicije */
-  }
-
-  .sidebar.left,
-  .sidebar.right {
-    left: auto; /* Resetiranje pozicije */
-    right: auto; /* Resetiranje pozicije */
-  }
-
-  main {
-    margin: 10px; /* Smanjene margine glavnog sadržaja */
-    padding: 10px;
-  }
-
-  .card {
-    flex-direction: column; /* Kartice se slažu vertikalno (slika iznad teksta) */
-  }
-
-  .card img {
-    width: 100%; /* Slika zauzima punu širinu kartice */
-    height: auto;
-    max-height: 200px; /* Ograničenje visine slike na manjim ekranima */
-    object-fit: cover;
-  }
-
-  .card-content {
-    padding: 10px;
-  }
-
-  #mapaContainer {
-    position: static; /* Mapa postaje dio normalnog toka dokumenta */
-    height: 50vh; /* Smanjena visina mape na manjim ekranima */
-    box-shadow: none;
-  }
 }
