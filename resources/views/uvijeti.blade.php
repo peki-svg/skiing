@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hr">
+<link rel="stylesheet" href="uvjeti.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Uvijeti korištenja</title>
+
+  <link rel="stylesheet" href="{{ asset('css/uvjeti.css') }}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+
+  <h1>Uvjeti korištenja platforme Skijališta u Europi</h1>
+
+  <p>
+    Korištenjem ove stranice (www.skijalistaeurope.hr), potvrđujete da ste upoznati s ovim uvjetima korištenja i da ih u cijelosti prihvaćate. Ako se ne slažete s bilo kojim dijelom ovih uvjeta, molimo vas da ne koristite naše usluge. Ovi uvjeti primjenjuju se na sve posjetitelje, registrirane korisnike i sve druge koji pristupe ili koriste platformu.
+  </p>
+
+  <p>
+    Naša platforma omogućuje korisnicima da istraže, uporede i ocijene skijališta diljem Europe, uz pomoć informacija, recenzija, filtera i korisničkih preporuka. Iako težimo točnosti i ažurnosti podataka, ne jamčimo da su svi sadržaji, cijene i informacije o vremenskim uvjetima uvijek potpuno točni. Korisnik je odgovoran za provjeru informacija prije donošenja odluka na temelju sadržaja na stranici.
+  </p>
+
+  <p>
+    Korištenje stranice dopušteno je osobama svih dobnih skupina, no registracija i unos osobnih podataka dopušteni su isključivo korisnicima starijima od 16 godina. Registracijom potvrđujete da ste unijeli točne, potpune i aktualne podatke. Svako lažno predstavljanje smatra se kršenjem uvjeta korištenja.
+  </p>
+
+  <p>
+    Sadržaji, opisi, slike i komentari objavljeni od strane korisnika ostaju vlasništvo autora, no Skijalista-eu.hr zadržava pravo korištenja, moderiranja ili uklanjanja bilo kojeg korisničkog sadržaja bez prethodne najave, posebno ako isti vrijeđa, potiče govor mržnje, nije u skladu sa zakonima ili narušava korisničko iskustvo.
+  </p>
+
+  <p>
+    Strogo je zabranjeno:
+    lažno predstavljanje,
+    objavljivanje tuđih osobnih podataka bez dozvole,
+    korištenje stranice u marketinške, komercijalne, uvredljive ili nezakonite svrhe.
+  </p>
+
+  <p>
+    Platforma može sadržavati poveznice na vanjske stranice koje nisu u vlasništvu niti pod kontrolom Skijalista-eu.hr. Ne preuzimamo odgovornost za sadržaje tih stranica niti za eventualne štete koje mogu nastati korištenjem istih.
+  </p>
+
+  <p>
+    Zadržavamo pravo izmjene uvjeta korištenja u bilo kojem trenutku bez prethodne obavijesti. Sve izmjene stupaju na snagu objavom na ovoj stranici. Preporučujemo korisnicima da povremeno pregledaju ovu stranicu kako bi ostali informirani.
+  </p>
+
+  <p>
+    U slučaju bilo kakvih pravnih pitanja, prigovora, ili sumnji na zloupotrebu, korisnici nas mogu kontaktirati putem mogucnosti kontakt na stranici.
+  </p>
+
+  <label>
+    Korištenjem ove stranice potvrđujem da sam pročitao/la i u potpunosti prihvaćam uvjete korištenja navedene na ovoj stranici.
+  </label>
+
+  <footer>
+    &copy; 2025 Skijališta u Europi. Sva prava pridržana.
+  </footer>
+
+ <button class="back-button" onclick="window.location='{{ route('registracija') }}'">
+    Natrag na registraciju
+</button>
+
+  
+    <script>
+      function goHome() {
+        window.location.href = 'registracija.html';
+      }
+    </script>
+
+</body>
+</html>

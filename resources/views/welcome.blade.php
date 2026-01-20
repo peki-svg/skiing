@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome</title>
+
+  <link rel="stylesheet" href="{{ asset('css/pocetna.css') }}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<nav class="navbar">
+  <div class="menu">
+    <a href="{{ route('welcome') }}">Početna</a>
+    <a href="{{ route('onama') }}">O nama</a>
+    <a href="{{ route('kontakt') }}">Kontakt</a>
+
+  </div>
+  <div class="right-section">
+    <label for="countrySelect">Odaberi državu:</label>
+<select id="countrySelect" onchange="handleCountryChange()">
+  <option value="">-- Odaberi --</option>
+  <option value="austrija">Austrija</option>
+  <option value="italija">Italija</option>
+  <option value="švicarska">Švicarska</option>
+  <option value="bugarska">Bugarska</option>
+  <option value="francuska">Francuska</option>
+  <option value="njemačka">Njemačka</option>
+  <option value="slovenija">Slovenija</option>
+  <option value="slovačka">Slovačka</option>
+  <option value="češka">Češka</option>
+  <option value="poljska">Poljska</option>
+  <option value="rumunjska">Rumunjska</option>
+  <option value="španjolska">Španjolska</option>
+  <option value="andora">Andora</option>
+  <option value="norveška">Norveška</option>
+  <option value="švedska">Švedska</option>
+  <option value="finska">Finska</option>
+  <option value="bosna i herzegovina">Bosna i Herzegovina</option>
+  <option value="crna gora">Crna Gora</option>
+  <option value="srbija">Srbija</option>
+  <option value="hrvatska">Hrvatska</option>
+</select>
+<button type="button" class="login-btn"
+    onclick="window.location='{{ route('login') }}'">
+Login
+</button>
+
+  </div>
+</nav>
+
+ <div class="wrapper"></div>
+
+<div id="mapaContainer">
+  <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="index.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<body>
+<main>
+ <div class="news">
+    <h1>Najnovije vijesti</h1>
+    <a href="https://planetski.eu/" target="_blank" class="card">
+      <img src="https://planetski.eu/wp-content/uploads/2021/01/PlanetSkiLogo-Hi-res..jpeg" alt="Slika vijesti">
+      <div class="card-content">
+        <h3>Planetski</h3>
+        <p>Pronađi sve najnovije vijesti o skijalištima i skijanju</p><br>
+        <p>U realnom vremenu vijesti o skijalištima koja rade i koja imaju snijega</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="ski-resorts">
+    <h2>4 najpoznatija skijališta u Europi</h2>
+
+    <a href="https://www.lechzuers.com/en/winter/skiing" target="_blank" class="card">
+      <img src="https://www.snowandrock.com/content/dam/snowandrock/seo-test/ski-resorts/lechskiresort1.jpg" alt="Skijalište 1">
+      <div class="card-content">
+        <h3>Lech, Austrija</h3>
+        <p>Smješten u slikovitom alpskom krajoliku regije Arlberg, Lech je jedno od najelitnijih i najpoznatijih skijališta u Europi. 
+          Poznat je po vrhunski održavanim stazama, 
+          luksuznim hotelima i savršenim uvjetima za freeride skijanje. Idealno za one koji traže mir, kvalitetu i ekskluzivan zimski doživljaj.</p>
+      </div>
+    </a>
+
+    <a href="https://www.avoriaz.com/en/" target="_blank" class="card">
+      <img src="https://blog.maisonsport.com/wp-content/uploads/2024/02/morzine-1600x1068.jpeg" alt="Skijalište 2">
+      <div class="card-content">
+        <h3>Avoriaz, Francuska</h3>
+        <p>Avoriaz je moderno skijalište u srcu francuskih Alpa, poznato po neobičnoj drvenoj arhitekturi i činjenici da je potpuno bez automobila – 
+          prijevoz se odvija saonicama i motornim sanjkama. 
+          Dio je ogromnog područja Portes du Soleil, s više od 600 km povezanih staza, idealno za obitelji, snowboardere i iskusne skijaše.</p>
+      </div>
+    </a>
+
+    <a href="https://verbier4vallees.ch/en" target="_blank" class="card">
+      <img src="https://www.melbtravel.com/wp-content/uploads/2024/01/What-you-need-to-know-about-skiing-in-Verbier-Switzerland.jpeg" alt="Skijalište 3">
+      <div class="card-content">
+        <h3>Verbier, Švicarska</h3>
+        <p>Verbier je jedno od najprestižnijih švicarskih skijališta, smješteno u regiji 4 Vallées. Poznato je po vrhunskim terenima izvan piste,
+           živahnoj après-ski sceni i panoramskim pogledima na Alpe. Privlači iskusne skijaše, freeridere i one koji traže luksuzan zimski odmor.</p>
+      </div>
+    </a>
+    <a href="https://www.altabadia.org/en/" target="_blank" class="card">
+      <img src="https://www.visitaltabadia.it/images/altabadia/inverno-altabadia.jpg" alt="Skijalište 3">
+      <div class="card-content">
+        <h3>Alta Badia, Italija</h3>
+        <p>Alta Badia je skijalište u Dolomitima u Italiji, poznato po blagim do srednje teškim stazama idealnim za obitelji i rekreativce.
+           Dio je skijaške regije Dolomiti Superski i nudi predivne poglede, vrhunsku gastronomiju i pristup ruti Sella Ronda.</p>
+      </div>
+    </a>
+
+    
+  </div>
+  </main>
+
+<div class="sidebar left">
+  <a href="https://www.favbet.hr/" target="_blank">
+    <img src="https://i.pinimg.com/474x/89/9c/79/899c7953d938e95110363e9a4efbfd4a.jpg" alt="Favbet Casino" class="favbetreklama" style="transform: rotate(0deg);">
+  </a>
+</div>
+
+    <div class="sidebar right">
+  <a href="https://www.admiral.hr/" target="_blank">
+     <img src="https://i.pinimg.com/736x/f5/4d/d1/f54dd13fd2084b2b43c6ffc9fb6bb337.jpg" alt="Admiral Casino" class="admiralreklama">
+  </a>
+</div>
+
+</body>
+</html>
