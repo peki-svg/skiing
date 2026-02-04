@@ -11,12 +11,12 @@
     </head>
     <body>
         <h1>Login</h1>
-        <button class="back-button" onclick="goHome()">🏠 Početna</button>
+        <a href="{{ route('welcome') }}" class="back-button">🏠 Početna</a>
   
     <script>
       function goHome() {
         // Zamijeni 'index.html' s pravom početnom stranicom ako je drugačije
-        window.location.href = 'index.html';
+        window.location.href = 'welcome';
       }
     </script>
         <form>
