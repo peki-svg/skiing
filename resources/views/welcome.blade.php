@@ -55,7 +55,8 @@ Login
 </div>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="index.js"></script>
+<script src="{{ asset('js/index.js') }}"></script>
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <body>
 <main>
