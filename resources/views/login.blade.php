@@ -33,7 +33,7 @@
             </div><br>
 
             <a href="{{ route('registracija') }}" class="register-label">
-    Nemate račun? Registriraj se ovdje.
+    Nemate račun ? Registriraj se ovdje.
 </a>              
                 
       </select> <br><br>
