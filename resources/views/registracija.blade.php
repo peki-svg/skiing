@@ -62,18 +62,22 @@
 <label class="checkbox-container">
     Prihvaćam 
     <a href="{{ route('uvijeti') }}" target="_blank">uvjete korištenja</a>
-    <input type="checkbox" required>
+    <input type="checkbox" id="terms" required>
 </label>
 
 
-      <button class="dugmeregistr" href="main.html" > Registriraj se </button>
+      <button type="button" onclick="window.location='{{ route('login') }}'">
+    Registriraj se
+</button>
 
 
-      <script src="registracija.js"></script>
+      
 
 
       </form>
+      <script src="{{ asset('js/registracija.js') }}"></script>
     </body>
+    
 
 
 </html>

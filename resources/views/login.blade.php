@@ -42,7 +42,7 @@
       <button class="dugmeregistr"> Prijavi se </button>
 
 
-      <script src="login.js"></script>
+      <script src="{{ asset('js/login.js') }}"></script>
 
 
       </form>

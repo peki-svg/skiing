@@ -27,3 +27,5 @@ Route::get('/uvijeti', function () {
 })->name('uvijeti');
 
 
+
+
