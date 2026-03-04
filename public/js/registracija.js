@@ -15,13 +15,13 @@ togglePassword.addEventListener("click", () => {
 
 
 document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault(); 
+    
   
     const name = document.getElementById("name").value;
-    const surname = document.getElementById("surname").value;
+    /*const surname = document.getElementById("surname").value;*/
     const email = document.getElementById("Email").value;
     const password = document.getElementById("password").value;
-    const birthdate = document.getElementById("date-of-birth").value;
+    /*const birthdate = document.getElementById("date-of-birth").value;*/
     const accepted = document.getElementById("terms").checked;
   
     if (!accepted) {
@@ -31,14 +31,22 @@ document.querySelector("form").addEventListener("submit", function (e) {
   
     const user = {
       name,
-      surname,
+       /*surname,*/
       email,
-      password,
-      birthdate
+      password
+       /*birthdate*/
     };
   
-    localStorage.setItem("user", JSON.stringify(user));
-    window.location.href = "login.html";
+    
   });
+
+  const togglePasswordConfirmation = document.querySelector("#togglePasswordConfirmation");
+const passwordConfirmation = document.querySelector("#password_confirmation");
+
+togglePasswordConfirmation.addEventListener("click", function () {
+    const type = passwordConfirmation.getAttribute("type") === "password" ? "text" : "password";
+    passwordConfirmation.setAttribute("type", type);
+    this.classList.toggle("fa-eye-slash");
+});
   
 

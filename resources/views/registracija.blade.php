@@ -18,15 +18,13 @@
         window.location.href = 'index.html';
       }
     </script>
-        <form>
+        <form method="POST" action="{{ route('registracija.store') }}">
+            @csrf
             <label for="name">Ime</label>
-            <input type="text" id="name" required><br>
-
-            <label for="surname">Prezime</label>
-            <input type="text" id="surname" required><br>
+            <input type="text" id="name" name="name" required><br>
 
             <label for="Email">E-mail</label>
-            <input type="email" id="Email" required><br>
+            <input type="email" id="Email" name="email" required><br>
 
             <div class="input-group">
               <label for="password">Lozinka</label>
@@ -53,10 +51,21 @@
             
             </div><br>
             <label for="password" class="password-label">
+
+
+           <label for="password_confirmation">Potvrdi lozinku</label>
+<div class="tooltip-wrapper">
+  <input
+    type="password"
+    id="password_confirmation"
+    name="password_confirmation"
+    required
+  />
+  <i class="fa-solid fa-eye eye-icon" id="togglePasswordConfirmation"></i>
+</div>
               
 
-            <label for="date-of-birth">Datum rođenja</label>
-            <input type="date" id="date-of-birth" required>
+           
                 
       </select> <br><br>
 <label class="checkbox-container">
@@ -66,16 +75,17 @@
 </label>
 
 
-      <button type="button" onclick="window.location='{{ route('login') }}'">
-    Registriraj se
-</button>
-
+         <button type="submit">
+        Registriraj se
+    </button>
 
       
 
 
       </form>
+      
       <script src="{{ asset('js/registracija.js') }}"></script>
+      
     </body>
     
 

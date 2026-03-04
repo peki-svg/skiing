@@ -129,4 +129,19 @@ Login
 </div>
 
 </body>
+@if(isset($posts) && $posts->count())
+@foreach($posts as $post)
+<h2>{{ $post->title }}</h2>
+<p>Autor: {{ $post->user->name }}</p>
+<hr>
+@endforeach
+@else
+<p>Nema postova u bazi.</p>
+@endif
+@if(session('success'))
+    <div style="color: green;">
+        {{ session('success') }}
+    </div>
+@endif
 </html>
+
