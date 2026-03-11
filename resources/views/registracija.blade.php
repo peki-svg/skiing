@@ -75,7 +75,7 @@
 </label>
 
 
-         <button type="submit">
+         <button class="dugmeregistr" href="{{ route('welcome') }}" type="submit">
         Registriraj se
     </button>
 
